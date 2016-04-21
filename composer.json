@@ -1,0 +1,17 @@
+{
+  "name": "ayalma/SmsSender",
+  "description": "a little library for using afe.ir sms panel webservice",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "ali mohammadi",
+      "email": "alimohammadi350@gmail.com"
+    }
+  ],
+  "autoload":{
+    "psr-4":{
+      "ir\\ayalma\\SmsSender\\" : "Src/ir/ayalma/SmsSender"
+    }
+  }
+}
