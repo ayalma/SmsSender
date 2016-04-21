@@ -1,5 +1,5 @@
 {
-  "name": "ayalma/SmsSender",
+  "name": "ayalma/sms_sender",
   "description": "a little library for using afe.ir sms panel webservice",
   "minimum-stability": "stable",
   "license": "proprietary",
