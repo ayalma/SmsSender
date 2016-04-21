@@ -1,19 +1,27 @@
 {
   "name": "ayalma/sms_sender",
   "type": "library",
+  "keywords": ["library", "sms-sender", "php"],
+  "homepage": "https://github.com/lkorth/php-gcm",
+  "license": "Apache-2.0",
   "description": "a little library for using afe.ir sms panel webservice",
   "minimum-stability": "stable",
-  "license": "proprietary",
-  "version":"0.0.1",
   "authors": [
     {
       "name": "ali mohammadi",
       "email": "alimohammadi350@gmail.com"
     }
   ],
+  "support": {
+    "issues": "https://github.com/ayalma/SmsSender/issues",
+    "source": "https://github.com/ayalma/SmsSender"
+  },
   "autoload":{
     "psr-4":{
       "ir\\ayalma\\SmsSender\\" : "Src/ir/ayalma/SmsSender"
     }
+  },
+  "require": {
+    "php": ">=5.3.10"
   }
 }
