@@ -1,8 +1,10 @@
 {
   "name": "ayalma/sms_sender",
+  "type": "library",
   "description": "a little library for using afe.ir sms panel webservice",
   "minimum-stability": "stable",
   "license": "proprietary",
+  "version":"0.0.1",
   "authors": [
     {
       "name": "ali mohammadi",
