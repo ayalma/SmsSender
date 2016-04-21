@@ -18,7 +18,7 @@
   },
   "autoload":{
     "psr-4":{
-      "ir\\ayalma\\SmsSender\\" : "Src/ir/ayalma/SmsSender"
+      "ir\\ayalma\\SmsSender\\" : "Src/ir/ayalma/SmsSender/"
     }
   },
   "require": {
