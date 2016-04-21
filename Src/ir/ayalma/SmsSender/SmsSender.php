@@ -2,7 +2,6 @@
 
 namespace ir\ayalma\SmsSender;
 
-require "../../../../vendor/autoload.php";
 
 use Exception;
 use SoapClient;
@@ -79,7 +78,7 @@ class SmsSender
 
         $param = array('Username' => $this->_config->getUserName(),
             'Password' => $this->_config->getPassword(),
-            'Number' => "$this->_config->getNumber()",
+            'Number' => $this->_config->getNumber(),
             'Mobile' => array("$mobile"),
             'Message' => "$message",
             'Type' => "$type");
@@ -110,8 +109,8 @@ class SmsSender
         if ($this->_client == null)
             throw new Exception('client is null . pls call connect method first');
 
-        $param = array('Username' => "$this->_config->getUserName()",
-            'Password' => "$this->_config->getPassword()",
+        $param = array('Username' => $this->_config->getUserName(),
+            'Password' => $this->_config->getPassword(),
             'SmsID' => "$massageId");
 
         $method = 'GetMessageStatus';

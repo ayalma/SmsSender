@@ -6,7 +6,6 @@
  * Time: 7:32 PM
  */
 namespace ir\ayalma\SmsSender;
-require "../../../../vendor/autoload.php";
 
 
 class Config
