@@ -6,6 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'ir\\ayalma\\SmsSender\\Client' => $baseDir . '/Src/ir/ayalma/SmsSender/Client.php',
     'ir\\ayalma\\SmsSender\\Config' => $baseDir . '/Src/ir/ayalma/SmsSender/Config.php',
+    'ir\\ayalma\\SmsSender\\SmsManager' => $baseDir . '/Src/ir/ayalma/SmsSender/SmsManager.php',
     'ir\\ayalma\\SmsSender\\SmsSender' => $baseDir . '/Src/ir/ayalma/SmsSender/SmsSender.php',
 );
