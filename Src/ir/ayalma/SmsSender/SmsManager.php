@@ -93,12 +93,12 @@ class SmsManager
      */
     public function GetMessageStatusV5($messageId)
     {
-        return $this->smsSender->getMessagesStatus($messageId,$this->_clients[5]);
+        return $this->smsSender->getMessagesStatus($messageId, $this->_clients[5]);
     }
 
     public function GetMessagesStatusV5($messagesId)
     {
-        return $this->smsSender->getMessagesStatus($messagesId,$this->_clients[5]);
+        return $this->smsSender->getMessagesStatus($messagesId, $this->_clients[5]);
     }
 
     public function SendMessageV5($mobile, $message, $type)
@@ -112,24 +112,24 @@ class SmsManager
 
     public function getMessageStatusV7($messageId)
     {
-        return $this->smsSender->getMessagesStatus($messageId,$this->_clients[7]);
+        return $this->smsSender->getMessagesStatus($messageId, $this->_clients[7]);
     }
 
     public function getMessagesStatusV7($messagesId)
     {
-        return $this->smsSender->getMessagesStatus($messagesId,$this->_clients[7]);
+        return $this->smsSender->getMessagesStatus($messagesId, $this->_clients[7]);
     }
 
     /**
-     * @param $mobile      : destination user mob number.
-     * @param $message     : msg for send.
-     * @param $type        : type of sending : for more info go to @link{afe.ir};
+     * @param $mobile : destination user mob number.
+     * @param $message : msg for send.
+     * @param $type : type of sending : for more info go to @link{afe.ir};
      * @param $checkingId : this id will be resent to you if afe receive your request.
      * @return array|string: status of sending.
      */
-    public function sendMessageV7($mobile, $message, $type, $checkingId)
+    public function sendMessageV7($mobile, $message, $checkingId, $type)
     {
-        return $this->smsSender->sendMessage7($this->_clients[7], $mobile, $message, $type,$checkingId);
+        return $this->smsSender->sendMessage7($this->_clients[7], $mobile, $message, $checkingId, $type);
     }
 
     /**
@@ -138,7 +138,7 @@ class SmsManager
      */
     public function getMessageIdV7($checkingId)
     {
-        return $this->smsSender->getMessageId($this->_clients[7],$checkingId);
+        return $this->smsSender->getMessageId($this->_clients[7], $checkingId);
     }
 
     /**
@@ -152,13 +152,13 @@ class SmsManager
     /**
      * @param array $numbers : array of number for sending sms
      * @param array $mobiles : array of mobile will receive sms
-     * @param array $types   : array of type for each sms.
-     * @param array $messages: array of message for send to users.
+     * @param array $types : array of type for each sms.
+     * @param array $messages : array of message for send to users.
      * @return array         : status of sending.
      */
     public function sendMessagePeerToPeer($numbers, $mobiles, $types, $messages)
     {
-        return $this->smsSender->sendMessagePeerToPeer($this->_clients[7],$numbers,$mobiles,$types,$messages);
+        return $this->smsSender->sendMessagePeerToPeer($this->_clients[7], $numbers, $mobiles, $types, $messages);
     }
 
 
