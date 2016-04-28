@@ -4,6 +4,7 @@ namespace ir\ayalma\SmsSender;
 
 
 use Exception;
+use MongoDB\Driver\Exception\ConnectionTimeoutException;
 
 /**
  * Created by PhpStorm.
@@ -195,14 +196,20 @@ class SmsSender
      */
     private function SendRequest(Client $client, $method, $param)
     {
-        $result = $client->getSoapClient()->__soapCall($method, array($param));
+        try {
+            $result = $client->getSoapClient()->__soapCall($method, array($param));
 
-        $merge = $method . 'Result';
+            $merge = $method . 'Result';
 
-        if ($result->$merge->string != '')
-            return $result->$merge->string;
-        else
-            return $result->$merge;
+            if ($result->$merge->string != '')
+                return $result->$merge->string;
+            else
+                return $result->$merge;
+        }
+        catch (ConnectionTimeoutException $e)
+        {
+            return 'TimeOut';
+        }
     }
 
 }
